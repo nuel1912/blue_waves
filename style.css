@@ -156,3 +156,28 @@
     font-weight: 700;
     border: 1px solid #cbd5e1;
 }
+
+
+@media (max-width: 768px) {
+    .na {
+        width: 45%;
+    }
+    .container, .conv {
+        width: 90%;
+    }
+    .container h1, .conv h1 {
+        font-size: 35px;
+    }
+    .container button {
+        width: 50%;
+    }
+    .row {
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+    .row button {
+        width: 100%;
+    }
+}
