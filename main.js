@@ -4,6 +4,7 @@ function top_up() {
 }
 
 
+//A function that holds the main opttions...
 function options() {
     let value = prompt("Welcome! Enter:\na - Purchase Airtime\nb - Data Plans\nc - Cancel"); //Asks if user wants to purchase airtime...
 
@@ -20,7 +21,7 @@ function options() {
 }
 
 
-
+//A function that holds the airtime options...
 function airtime() {
     let amount = prompt("Enter:\na - #50     b - #100\nc - #200     d - #500\ne - #1000     f - #2000\ng - Others...     h - Back") //Brings up a list of amount to choose from...
 
@@ -91,19 +92,60 @@ function airtime() {
     }
 }
 
+
+//A function that holds the data plans
 function datap() {
-    let data = prompt("Enter:\na - My Offer\nb - Data Bundles");
+    let data = prompt("Enter:\na - My Offer\nb - Data Bundles\nc - #5000/22GB/30 days\nd - #3000/11GB/30 days\ne - #1500/6GB/7 days\nf - #500/2.5GB/2 days\ng - #700/1GB/Free Medical");
 
     if (data == "a") {
         offers();
     } else if (data == "b") {
         datab();
+    } else if (data == "c") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 22GB data plan for 30 days was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (data == "d") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 11GB data plan for 30 days was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (data == "e") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 6GB data plan for 7 days was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (data == "f") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 2.5GB data plan for 2 days was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
     } else {
-        alert("Thank you");
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 1GB data plan for and free medical was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
     }
 }
 
 
+//A function that holds the offers under the data plans...
 function offers() {
     let amount = prompt("My Blue Wave Offer:\na - #500/2.5GB/2 days\nb - #1000/5GB/14 days\nc - More Data Offer\nd - Voice Offer\ne - Recharge Offer\nf - Back\ng - Menu") //Brings up a list of amount to choose from...
 
@@ -154,6 +196,8 @@ function offers() {
     }
 }
 
+
+//A function that holds the data bundles...
 function datab() {
     let amount = prompt("My Blue Wave Offer:\na - Daily/Weekly Bundles\nb - Weekly Bundles\nc - Monthly Bundles\nd - More Data (Data++)\ne - Mega Bundles\nf - Big Data Plans\ng - Everyday ON plans\nh - Recharge from Bank\ni - Back\nj - Menu") //Brings up a list of amount to choose from...
 
