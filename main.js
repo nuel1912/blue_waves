@@ -20,6 +20,7 @@ function options() {
 }
 
 
+
 function airtime() {
     let amount = prompt("Enter:\na - #50     b - #100\nc - #200     d - #500\ne - #1000     f - #2000\ng - Others...     h - Back") //Brings up a list of amount to choose from...
 
@@ -96,7 +97,7 @@ function datap() {
     if (data == "a") {
         offers();
     } else if (data == "b") {
-        alert("Hiiii");
+        datab();
     } else {
         alert("Thank you");
     }
@@ -110,17 +111,17 @@ function offers() {
         let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
 
         if (check == "a") {
-            alert("Your #50 top-up was successful!");
+            alert("Your request for 2.5GB data plan for 2 days was successful!");
         } else {
-            alert ("Recharge cancelled");
+            alert ("Request cancelled!");
         }
     } else if (amount == "b") {
         let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
 
         if (check == "a") {
-            alert("Your #100 top-up was successful!");
+            alert("Your request for 5GB data plan for 14 days was successful!");
         } else {
-            alert ("Recharge cancelled");
+            alert ("Request cancelled!");
         }
     } else if (amount == "c") {
         let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
@@ -148,10 +149,82 @@ function offers() {
         }
     } else if (amount == "f") {
         datap();
-    } else if (amount == "g") {
-        options();
     } else {
+        options();
+    }
+}
+
+function datab() {
+    let amount = prompt("My Blue Wave Offer:\na - Daily/Weekly Bundles\nb - Weekly Bundles\nc - Monthly Bundles\nd - More Data (Data++)\ne - Mega Bundles\nf - Big Data Plans\ng - Everyday ON plans\nh - Recharge from Bank\ni - Back\nj - Menu") //Brings up a list of amount to choose from...
+
+    if (amount == "a") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 2.5GB data plan for 2 days was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (amount == "b") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 5GB data plan for 14 days was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (amount == "c") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #200 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "d") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #500 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "e") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "f") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "g") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "h") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "i") {
         datap();
+    } else {
+        options();
     }
 }
 
