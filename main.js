@@ -147,7 +147,7 @@ function datap() {
 
 //A function that holds the offers under the data plans...
 function offer() {
-    let amount = prompt("My Blue Wave Offer:\na - #500/2.5GB/2 days\nb - #1000/5GB/14 days\nc - More Data Offer\nd - Voice Offer\ne - Recharge Offer\nf - Back\ng - Menu") //Brings up a list of amount to choose from...
+    let amount = prompt("My Blue Wave Offer:\na - #500/2.5GB/2 days\nb - #1000/5GB/14 days\nc - More Data Offer\nd - Voice Offer\ne - Back\nf - Menu") //Brings up a list of amount to choose from...
 
     if (amount == "a") {
         let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
@@ -168,22 +168,8 @@ function offer() {
     } else if (amount == "c") {
         mdo();
     } else if (amount == "d") {
-        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-        if (check == "a") {
-            alert("Your #500 top-up was successful!");
-        } else {
-            alert ("Recharge cancelled");
-        }
+        vo();
     } else if (amount == "e") {
-        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-        if (check == "a") {
-            alert("Your #1000 top-up was successful!");
-        } else {
-            alert ("Recharge cancelled");
-        }
-    } else if (amount == "f") {
         datap();
     } else {
         options();
@@ -212,6 +198,42 @@ function mdo() {
             alert ("Request cancelled!");
         }
     } else if (offers == "c") {
+        offer();
+    } else {
+        options();
+    }
+}
+
+
+
+function vo() {
+    let offers = prompt("a - #100 gives #500 for calls\nb - #200 gives #1000 for calls\nc - #300 gives #1500 for calls\nd - Back\ne - Menu") //Brings up a list of amount to choose from...
+
+    if (offers == "a") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for #100 airtime for #500 for calls was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (offers == "b") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for #200 airtime for #1000 for calls was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (offers == "c") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for #300 airtime for #1500 for calls was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (offers == "d") {
         offer();
     } else {
         options();
