@@ -98,7 +98,7 @@ function datap() {
     let data = prompt("Enter:\na - My Offer\nb - Data Bundles\nc - #5000/22GB/30 days\nd - #3000/11GB/30 days\ne - #1500/6GB/7 days\nf - #500/2.5GB/2 days\ng - #700/1GB/Free Medical");
 
     if (data == "a") {
-        offers();
+        offer();
     } else if (data == "b") {
         datab();
     } else if (data == "c") {
@@ -146,7 +146,7 @@ function datap() {
 
 
 //A function that holds the offers under the data plans...
-function offers() {
+function offer() {
     let amount = prompt("My Blue Wave Offer:\na - #500/2.5GB/2 days\nb - #1000/5GB/14 days\nc - More Data Offer\nd - Voice Offer\ne - Recharge Offer\nf - Back\ng - Menu") //Brings up a list of amount to choose from...
 
     if (amount == "a") {
@@ -166,13 +166,7 @@ function offers() {
             alert ("Request cancelled!");
         }
     } else if (amount == "c") {
-        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-        if (check == "a") {
-            alert("Your #200 top-up was successful!");
-        } else {
-            alert ("Recharge cancelled");
-        }
+        mdo();
     } else if (amount == "d") {
         let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
 
@@ -191,6 +185,34 @@ function offers() {
         }
     } else if (amount == "f") {
         datap();
+    } else {
+        options();
+    }
+}
+
+
+//A function just under offers...
+function mdo() {
+    let offers = prompt("a - #200/200MB/3 days\nb - #300/1GB/1 day\nc - Back\nd - Menu") //Brings up a list of amount to choose from...
+
+    if (offers == "a") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 200MB data plan for 3 days was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (offers == "b") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your request for 1GB data plan for 1 day was successful!");
+        } else {
+            alert ("Request cancelled!");
+        }
+    } else if (offers == "c") {
+        offer();
     } else {
         options();
     }
