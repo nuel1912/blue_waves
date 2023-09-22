@@ -1,154 +1,164 @@
 // alert('Hello World!');
-
 function top_up() {
-    let value = prompt("Welcome! Enter:\na - Purchase Airtime\nb - Cancel"); //Asks if user wants to purchase airtime...
+    options();
+}
+
+
+function options() {
+    let value = prompt("Welcome! Enter:\na - Purchase Airtime\nb - Data Plans\nc - Cancel"); //Asks if user wants to purchase airtime...
 
     if (value == "a") {
-        let amount = prompt("Enter:\na - #50     b - #100\nc - #200     d - #500\ne - #1000     f - #2000\ng - Others...     h - Back") //Brings up a list of amount to choose from...
-
-        if (amount == "a") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-            if (check == "a") {
-                alert("Your #50 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "b") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-            if (check == "a") {
-                alert("Your #100 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "c") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-            if (check == "a") {
-                alert("Your #200 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "d") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-            if (check == "a") {
-                alert("Your #500 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "e") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-
-            if (check == "a") {
-                alert("Your #1000 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "f") {
-            let check = prompt("Are you sure?\na - Yes\nb - Nope");
-
-            if (check == "a") {
-                alert("Your #2000 top-up was successful!");
-            } else {
-                alert ("Recharge cancelled");
-            }
-        } else if (amount == "g") {
-            let desired = Number(prompt("Enter your desired amount...")); //Prompts for if the user wants to enter a desired or specific amount...
-
-            if (Number(desired) < 50) {
-                alert("Purchase cannot be made."); //Ensures that purchase below #50 can't be made...
-            } else {
-                let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Ensures purchase of #50 and above can be made...
-
-                if (check == "a") {
-                    alert("Your #" + Number(desired) + " top-up was successful!");
-                } else {
-                    alert ("Recharge cancelled");
-                }
-            }
-        } else {
-            let value = prompt("Welcome! Enter:\na - Purchase Airtime\nb - Cancel"); //Returns one back to the previous page...
-
-            if (value == "a") {
-                let amount = prompt("Enter:\na - #50     b - #100\nc - #200     d - #500\ne - #1000     f - #2000\ng - Back  ") //Brings up a list of amount to choose from...
-
-                if (amount == "a") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-        
-                    if (check == "a") {
-                        alert("Your #50 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "b") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-        
-                    if (check == "a") {
-                        alert("Your #100 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "c") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-        
-                    if (check == "a") {
-                        alert("Your #200 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "d") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-        
-                    if (check == "a") {
-                        alert("Your #500 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "e") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
-        
-                    if (check == "a") {
-                        alert("Your #1000 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "f") {
-                    let check = prompt("Are you sure?\na - Yes\nb - Nope");
-        
-                    if (check == "a") {
-                        alert("Your #2000 top-up was successful!");
-                    } else {
-                        alert ("Recharge cancelled");
-                    }
-                } else if (amount == "g") {
-                    let desired = Number(prompt("Enter your desired amount...")); //Prompts for if the user wants to enter a desired or specific amount...
-        
-                    if (Number(desired) < 50) {
-                        alert("Purchase cannot be made."); //Ensures that purchase below #50 can't be made...
-                    } else {
-                        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Ensures purchase of #50 and above can be made...
-        
-                        if (check == "a") {
-                            alert("Your #" + Number(desired) + " top-up was successful!");
-                        } else {
-                            alert ("Recharge cancelled");
-                        }
-                    }
-                }
-            } else if (value == "b") {
-                alert("Thamks for coming.");
-            } else {
-                alert("Not a required option!");
-            }
-        }
+        airtime();
     } else if (value == "b") {
+        datap();
+    } else if (value == "c") {
         alert("Thamks for coming.");
-    } else {
+    }
+    else {
         alert("Not a required option!");
     }
 }
+
+
+function airtime() {
+    let amount = prompt("Enter:\na - #50     b - #100\nc - #200     d - #500\ne - #1000     f - #2000\ng - Others...     h - Back") //Brings up a list of amount to choose from...
+
+    if (amount == "a") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #50 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "b") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #100 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "c") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #200 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "d") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #500 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "e") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "f") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope");
+
+        if (check == "a") {
+            alert("Your #2000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "g") {
+        let desired = Number(prompt("Enter your desired amount...")); //Prompts for if the user wants to enter a desired or specific amount...
+
+        if (Number(desired) < 50) {
+            alert("Purchase cannot be made."); //Ensures that purchase below #50 can't be made...
+        } else {
+            let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Ensures purchase of #50 and above can be made...
+
+            if (check == "a") {
+                alert("Your #" + Number(desired) + " top-up was successful!");
+            } else {
+                alert ("Recharge cancelled");
+            }
+        }
+    } else {
+        options();
+    }
+}
+
+function datap() {
+    let data = prompt("Enter:\na - My Offer\nb - Data Bundles");
+
+    if (data == "a") {
+        offers();
+    } else if (data == "b") {
+        alert("Hiiii");
+    } else {
+        alert("Thank you");
+    }
+}
+
+
+function offers() {
+    let amount = prompt("My Blue Wave Offer:\na - #500/2.5GB/2 days\nb - #1000/5GB/14 days\nc - More Data Offer\nd - Voice Offer\ne - Recharge Offer\nf - Back\ng - Menu") //Brings up a list of amount to choose from...
+
+    if (amount == "a") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #50 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "b") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #100 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "c") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #200 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "d") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #500 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "e") {
+        let check = prompt("Are you sure?\na - Yes\nb - Nope"); //Checks to know if user is sure or not...
+
+        if (check == "a") {
+            alert("Your #1000 top-up was successful!");
+        } else {
+            alert ("Recharge cancelled");
+        }
+    } else if (amount == "f") {
+        datap();
+    } else if (amount == "g") {
+        options();
+    } else {
+        datap();
+    }
+}
+
+
+
+
+
 
 
 //This part contains the assignment for Ternary Operator & Template Literals...
@@ -242,3 +252,129 @@ function tempFK() {
 }
 
 // temp();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function isPrime(number) {
+    // Handle special cases for numbers less than 2
+    if (number <= 1) {
+      return false;
+    }
+  
+    // Check for divisibility from 2 to the square root of the number
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return false; // Not a prime number
+      }
+    }
+  
+    return true; // It's a prime number
+  }
+  
+  // Example usage:
+  console.log(isPrime(2)); // true
+  console.log(isPrime(11)); // true
+  console.log(isPrime(25)); // false
+
+  
+
+
+//   function isPrime(number) {
+//       if (number <= 1) {
+//         return false;
+//       }
+    
+//       for (let i = 2; i <= Math.sqrt(number); i++) {
+//         if (number % i === 0) {
+//           return false;
+//         }
+//       }
+    
+//       return true;
+//     }
+    
+//     function listPrimesInRange(start, end) {
+//       for (let number = start; number <= end; number++) {
+//         if (isPrime(number)) {
+//           // console.log(number);
+//           alert(number);
+//         }
+//       }
+//     }
+
+    
+//   let a = Number(prompt("Enter a number"));
+//   let b = Number(prompt("Enter a number"));
+
+//   listPrimesInRange(a,b);
+
+function heyy() {    
+    let a = Number(prompt("Enter a number")); //Prompts a user for an initial number...
+    let b = Number(prompt("Enter a number")); //Prompts a user for an end number...
+    
+    function isPrime(number) {
+        if (number <= 1) {
+          return false;
+        }
+      
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+      
+        return true;
+      }
+      
+      function listPrimesInRange(initial, end) {
+        const primeNumbers = []; // Initialize an array to store prime numbers...
+      
+        for (let number = initial; number <= end; number++) {
+          if (isPrime(number)) {
+            primeNumbers.push(number); // Add prime numbers to the array...
+          }
+        }
+      
+        if (primeNumbers.length > 0) {
+          alert("The prime numbers between " + initial + " and " + end + " are: " + primeNumbers.join(", ")); //Outputs all the prime numbers sent between the initial and end...
+        } else {
+          alert("No prime numbers found between " + initial + " and " + end + "."); //For non-prime numbers..
+        }
+      }
+
+    listPrimesInRange(a,b);
+}
+
+  
+  
+  // Call the function to list prime numbers between 1 and 100
+  
+
+
+
+
+
+
+
+
+  
+
+  
+  // Call the function to list prime numbers between 1 and 100 and alert the result
+//   listPrimesInRange(1, 100);
+  
+  
